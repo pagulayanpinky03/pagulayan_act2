@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Foodie Buddy</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" href="logo.jpg" type="img">
+        <style>
+            header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    box-shadow: 0 5px 10px rgba(90, 29, 29, 0.5);
+    padding: 5px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+
+header .navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: 20px;
+    padding: 10px;
+    color: burlywood;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    color: burlywood;
+    text-shadow: rgb(84, 59, 59);
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 170px;
+    background: rgb(57, 4, 4);
+    display: none;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+}
+
+header .navbar ul li:focus-within>ul,
+header .navbar ul li:hover>ul {
+    display: initial;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 20px;
+    color:burlywood;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 991px) {
+    header {
+        padding: 10px
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: black;
+        display: none;
+
+    }
+
+    header .navbar ul li {
+        width: 100%;
+    }
+
+    header .navbar ul li ul {
+        position: relative;
+        width: 100%;
+        left: 30px;
+    }
+
+    #menu-bar:checked~.navbar {
+        display: initial;
+    }
+}
+            body,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: "Lato", sans-serif;
+            }
+
+            body,
+            html {
+                height: 100%;
+                color: #0c0303;
+                line-height: 1.8;
+            }
+
+
+            .bgimg-1,
+            .bgimg-2{
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+
+            .bgimg-1 {
+                background-image: url('pic1.jpg');
+                min-height: 100%;
+            }
+
+
+            .bgimg-2 {
+                background-image: url("pic3.png");
+                min-height: 400px;
+            }
+
+            .w3-wide {
+                letter-spacing: 10px;
+            }
+
+            .w3-hover-opacity {
+                cursor: pointer;
+            }
+
+
+            @media only screen and (max-device-width: 1600px) {
+
+                .bgimg-1,
+                .bgimg-2,
+                .bgimg-3 {
+                    background-attachment: scroll;
+                    min-height: 400px;
+                }
+
+            }
+  
+        </style>
+    </head>
+<body>
+
+
+    <header>
+        <input type="checkbox" id="menu-bar">
+        <label for="menu-bar"><i class="fa fa-bars"></i></label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#gallery">FOOD GALLERY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">YOUR  <span
+                    class="w3-hide-small">FOODIE</span> BUDDY</span>
+        </div>
+    </div>
+
+<br>
+    <div class="w3-content w3-container w3-padding-90" id="about">
+        <h3 class="w3-center">ABOUT ME</h3>
+        <br>
+        <p class="w3-center"><em>I love food</em></p>
+        <p>Funny I may say but despite of my physique I love food. Everytime I  got bored, has my mood swings, or sad,
+            food is something that can lift up my mood. 
+        </p>
+        <div class="w3-row">
+            <div class="w3-col m6 w3-center w3-padding-large">
+                <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+                <img src="pic2.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" 
+                    width="500" height="333">
+            </div>
+
+            <div class="w3-col m6 w3-hide-small w3-padding-large">
+                <p>Welcome to my website. I am Pinky Pagulayan, 20 years of age a college student at Isabela State University-Roxas. 
+                    Im taking Bachelor of Science in Information Technology and an average student. Let''s be friends and explore more delicacies
+                    with each other.
+                </p>
+            </div>
+
+    </div>
+<br>
+
+
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-black w3-wide">PORTFOLIO</span>
+        </div>
+    </div>
+
+
+    <div class="w3-content w3-container w3-padding-64" id="gallery">
+        <h3 class="w3-center">MY Fav's</h3>
+        <p class="w3-center"><em>Here are some of my latest favorites. </em></p><br>
+
+  
+        <div class="w3-row-padding w3-center">
+            <div class="w3-col m3">
+                <img src="dinuguan.png" style="width:100%" >
+            </div>
+
+            <div class="w3-col m3">
+                <img src="flan.png" style="width:100%" >
+            </div>
+
+            <div class="w3-col m3">
+                <img src="igado.png" style="width:100%" >
+            </div>
+
+            <div class="w3-col m3">
+                <img src="pineapple.png" style="width:100%" >
+            </div>
+        </div>
+
+        <div class="w3-row-padding w3-center w3-section">
+            <div class="w3-col m3">
+                <img src="pakbet.png" style="width:100%" >
+            </div>
+
+            <div class="w3-col m3">
+                <img src="ramen.png" style="width:100%" >
+            </div>
+
+            <div class="w3-col m3">
+                <img src="coke.png" style="width:100%" >
+            </div>
+
+            <div class="w3-col m3">
+                <img src="taisan.png" style="width:100%" >
+            </div>
+
+        </div>
+    </div>
+
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+        <h3 class="w3-center">WHERE I LIVE</h3>
+
+        <div class="w3-row w3-padding-32 w3-section">
+            <div class="w3-col m4 w3-container">
+                <img src="roxas.png" class="w3-image w3-round" style="width:100%">
+            </div>
+            <div class="w3-col m8 w3-panel">
+                <div class="w3-large w3-margin-bottom">
+                    <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Roxas, Isabela<br>
+                    <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +63 965 769 3344
+                    151515<br>
+                    <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email:
+                    pagulayanpinky2@gmail.com.com<br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+        <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <div class="w3-xlarge w3-section">
+            <a href="https://www.facebook.com/pinky.pagulayan.3/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+            <a href="https://instagram.com/im_penks?igshid=ZDdkNTZiNTM="><i class="fa fa-instagram w3-hover-opacity"></i></a>
+            <a href="https://twitter.com/vio_p5859?t=2Hj7IHEDX2TmmkfdaAoJig&s=07"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+
+    </footer>
+
+   
+</body>
+
+</html>
